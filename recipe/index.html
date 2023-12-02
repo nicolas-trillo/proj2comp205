@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="noindex" />
+        <meta name="robots" content="nofollow" />
+        <script src="../js/r_lunch.js"></script>
+        <script src="../js/r_breakfast.js"></script>
+        <link rel="stylesheet" href="../base.css" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Recipe</title>
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <img
+                    src="../assets/tea.png"
+                    class="logo-tea"
+                    alt=""
+                    srcset=""
+                />
+                <img
+                    src="../assets/text-2.png"
+                    class="logo-text"
+                    alt=""
+                    srcset=""
+                />
+            </div>
+            <div class="nav-links">
+                <a href="../">Home</a>
+                <a href="#">Breakfast</a>
+                <a href="#">Lunch</a>
+            </div>
+        </nav>
+        <section id="recipe">
+            <h1 id="title">Default</h1>
+            <small id="calories">200</small>
+            <div class="img"></div>
+            <img
+                src="https://picsum.photos/300/200?grayscale"
+                id="image"
+                alt=""
+            />
+            <h2>Ingredients</h2>
+            <ul id="ingredients">
+                <li>Default</li>
+            </ul>
+            <h2>Instructions</h2>
+            <p id="instructions">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                provident dicta laboriosam corrupti esse maiores a itaque rem
+                sapiente eius!
+            </p>
+        </section>
+        <script>
+            // Nicolas Trillo
+            // COMP205
+            // 2023-12-14
+            // Script meant to populate webpage with data from linked
+            // files, using referential data provided in the URL.
+
+            // Retrieves data from URL
+            console.log(document);
+            const searchParams = new URLSearchParams(window.location.search);
+            const URLitemNumber = searchParams.get("r");
+            const URLrecipeType = searchParams.get("t");
+
+            // Defines type of recipe using data from url
+            function getType() {
+                if (URLrecipeType === "l") {
+                    return lunchRecipes;
+                } else {
+                    return breakfastRecipes;
+                }
+            }
+            let recipeType = getType();
+
+            // Populate elements with data
+            let title = document.getElementById("title");
+            title.innerText = recipeType[URLitemNumber].name;
+
+            let calories = document.getElementById("calories");
+            calories.innerText =
+                recipeType[URLitemNumber].calories + " calories";
+
+            let image = document.getElementById("image");
+            image.setAttribute("src", `${recipeType[URLitemNumber].image}`);
+
+            let ingredient = document.getElementById("ingredients");
+            let str = "";
+            recipeType[URLitemNumber].ingredients.forEach(function (item) {
+                str += "<li>" + item + "</li>";
+            });
+            ingredient.innerHTML = str;
+
+            let instructions = document.getElementById("instructions");
+            instructions.innerHTML = recipeType[URLitemNumber].instructions;
+
+            // Set document title and description
+            document.title = recipeType[URLitemNumber].name + " | Le Juan's";
+            document
+                .querySelector('meta[name="description"]')
+                .setAttribute(
+                    "content",
+                    recipeType[URLitemNumber].instructions
+                );
+        </script>
+    </body>
+</html>
