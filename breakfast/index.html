@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../evilcss.css" />
+        <link
+            rel="shortcut icon"
+            href="../assets/favicon.ico"
+            type="image/x-icon"
+        />
+        <title>Recipe Directory</title>
+    </head>
+    <body>
+        <nav>
+            <h1>LE JUANS' BREAKFASTS</h1>
+            <a href="../"><- Home</a>
+        </nav>
+        <div id="directory"></div>
+        <script src="../js/r_breakfast.js"></script>
+        <script>
+            let directory = document.getElementById("directory");
+            let i = 0;
+            for (const element of breakfastRecipes) {
+                directory.innerHTML += `
+                <a href="../recipe/?t=l&r=${i}" class="recipe">
+                    <img
+                        src="${element.image}"
+                        alt="${element.name}"
+                    />
+                    <div class="details">
+                        <h2>${element.name}</h2>
+                        <p>${element.calories}cals · ${element.prepTime}min · ${element.servings} people</p>
+                    </div>
+                </a>
+                `;
+                i++;
+            }
+        </script>
+    </body>
+</html>

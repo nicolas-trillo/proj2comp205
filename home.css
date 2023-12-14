@@ -1,0 +1,412 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a:not(.text-link) {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+body {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    font-family: "Inter", sans-serif;
+    border-width: 5px;
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    font: bold;
+    size: 50px;
+    margin-bottom: 3%;
+}
+
+p {
+    size: 24px;
+}
+
+h2 {
+    size: 24px;
+    text-overflow: wrap;
+    padding: 2%;
+}
+
+.navButton {
+    display: flex;
+}
+
+.button {
+    font-size: medium;
+    padding: 0;
+    color: black;
+    text-align: center;
+    margin-left: 25px;
+    margin-block: right;
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+}
+
+#Breakfasts {
+    text-align: center;
+    align-items: center;
+}
+
+#breakfast,
+#Lunch {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 30px;
+    width: auto;
+}
+
+.indBreakfast {
+    text-align: center;
+    display: grid;
+    grid-row: (3, 1);
+    min-width: none;
+    width: auto;
+    background-color: #ecc38d;
+    border: black solid 2px;
+    border-radius: 10px;
+}
+
+.indBreakfast1 {
+    text-align: center;
+    display: grid;
+    grid-row: (3, 1);
+    min-width: none;
+    width: auto;
+    background-color: #9eb37b;
+    border: black solid 2px;
+    border-radius: 10px;
+}
+
+.indBreakfast img {
+    width: 296px;
+    height: 296px;
+    object-fit: cover;
+}
+
+.indBreakfast1 img {
+    width: 296px;
+    height: 296px;
+    object-fit: cover;
+}
+
+#presentation {
+    text-size-adjust: 24px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+#Lunchs {
+    text-align: center;
+    align-items: center;
+}
+
+.Lunches {
+    text-align: center;
+    display: grid;
+    grid-row: (3, 1);
+    max-width: 31%;
+    min-width: none;
+    width: auto;
+    margin-bottom: 3%;
+    /*
+    display: flex;
+    gap: 20px;
+    */
+    background-color: #9eb37b;
+    border: black solid 2px;
+    border-radius: 10px;
+}
+
+#team img {
+    display: flex;
+    align-self: auto;
+}
+
+#contact {
+    background-color: #3660d2;
+    border-radius: 10px;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.input,
+#Message {
+    min-height: 22px;
+    margin-left: 20px;
+    border: 3px solid black;
+    text-align: justify;
+    flex-grow: 2;
+    width: 60%;
+}
+
+label {
+    display: flex;
+    min-height: 30px;
+    align-items: center;
+    max-width: 60%;
+}
+
+#Message {
+    flex-grow: 2;
+}
+
+#contact {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    color: white;
+    text-align: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 18px;
+    display: center;
+}
+
+#submit-button {
+    width: 200px;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+textarea,
+input {
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 19px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#footInfo {
+    text-align: center;
+    padding: 20px;
+    color: black;
+    margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+    img {
+        width: 100% !important;
+        height: auto;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    body {
+        max-width: 1400px;
+        position: relative;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        font-family: "Inter", sans-serif;
+        background-color: pink;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    h1 {
+        font: bold;
+        size: 50px;
+    }
+
+    p {
+        size: 24px;
+    }
+
+    h2 {
+        size: 24px;
+        text-overflow: wrap;
+        text-align: center;
+    }
+
+    .navButton {
+        display: flex;
+    }
+
+    .button {
+        font-size: medium;
+        padding: 0;
+        color: black;
+        text-align: center;
+        margin-left: 25px;
+        margin-block: right;
+        padding: 15px;
+        display: block;
+        text-decoration: none;
+    }
+
+    #breakfast,
+    #Lunch {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    #Lunchs {
+        margin-top: 20px;
+    }
+
+    .indBreakfast {
+        text-align: center;
+        max-width: 70% !important;
+        gap: 0px 30px;
+    }
+
+    .refreshmsg {
+        max-width: 70%;
+    }
+
+    .indBreakfast1 {
+        text-align: center;
+        max-width: 70% !important;
+        gap: 0px 30px;
+    }
+
+    #presentation {
+        text-size-adjust: 24px;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+
+    .Lunches {
+        text-align: center;
+        max-width: 70%;
+        gap: 0px 30px;
+        margin-top: 8%;
+    }
+
+    .Lunches img {
+        width: 70%;
+    }
+
+    #team img {
+        display: flex;
+        align-self: auto;
+    }
+
+    #contact {
+        background-color: #3660d2;
+        border-radius: 10px;
+        gap: 20px;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .input,
+    #Message {
+        min-height: 22px;
+        margin-left: 20px;
+        border: 3px solid black;
+        text-align: justify;
+        flex-grow: 2;
+        width: 60%;
+    }
+
+    label {
+        display: flex;
+        min-height: 30px;
+        align-items: center;
+        max-width: 60%;
+    }
+
+    #Message {
+        flex-grow: 2;
+    }
+
+    #contact {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    label {
+        color: white;
+        text-align: center;
+        align-items: center;
+        gap: 5px;
+        font-size: 18px;
+        display: center;
+    }
+
+    #submit-button {
+        width: 200px;
+        text-align: center;
+        border: 3px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    textarea,
+    input {
+        border: 3px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 19px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #footInfo {
+        text-align: center;
+        padding: 20px;
+        color: black;
+        margin-top: 10px;
+    }
+}
+
+/* codigo de nico */
+
+a.refreshmsg {
+    padding: 10px;
+    background-color: black;
+    color: var(--bg-colot);
+    height: fit-content !important;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    width: 100%;
+    border: black solid 2px;
+}

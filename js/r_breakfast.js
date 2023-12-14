@@ -24,8 +24,10 @@ const breakfastRecipes = [
         instructions:
             "Scramble the eggs in a pan over medium heat until cooked to your liking. Spread mashed avocado on toasted bread slices. Top with scrambled eggs, season with salt and pepper, and garnish with chopped chives.",
         calories: 320,
+        prepTime: 10,
+        servings: 2,
         image:
-            "https://media.istockphoto.com/id/1187087173/photo/toast-with-smashed-avocado-and-scrambled-egg.jpg?s=612x612&w=0&k=20&c=JPtJuJfArujviYnowQZXu1ztfPu4XMS_LRaOC0EWOXM=",
+            "https://twohealthykitchens.com/wp-content/uploads/2018/08/Breakfast-Avocado-Toast-with-Egg-Recipe-horiz-720x720.jpg",
     },
     {
         name: "Greek Yogurt Parfait",
@@ -38,8 +40,10 @@ const breakfastRecipes = [
         instructions:
             "In a glass, layer Greek yogurt, granola, and mixed berries. Repeat the layers. Drizzle honey on top. Serve chilled.",
         calories: 250,
+        prepTime: 5,
+        servings: 1,
         image:
-            "https://foolproofliving.com/wp-content/uploads/2017/12/Greek-Yogurt-Parfait-with-fruit.jpg",
+            "https://foolproofliving.com/wp-content/uploads/2017/12/Greek-Yogurt-Parfait-Recipe.jpg",
     },
     {
         name: "Vegetarian Breakfast Burrito",
@@ -68,8 +72,10 @@ const breakfastRecipes = [
         instructions:
             "Blend frozen banana, blueberries, Greek yogurt, and almond milk until smooth. Pour into a bowl. Top with granola and sliced banana.",
         calories: 280,
+        prepTime: 2,
+        servings: 1,
         image:
-            "https://thenutfreevegan.net/wp-content/uploads/2018/01/Easy-delicious-healthy-amazing-blueberry-banana-smoothie-bowl-chia-coconut-vegan-nut-free-nutfreevegan-dairy-free-recipe-breakfast.jpg",
+            "https://www.eatingwell.com/thmb/ZQrLhPC_RxCEhJwAHhayjBHXDV8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/7010038_CL_Bowls_ingredients_049-cf9ba6805e5f4c1593044106bec217d7.jpg",
     },
     {
         name: "Oatmeal with Almond Butter and Banana",
@@ -83,8 +89,10 @@ const breakfastRecipes = [
         instructions:
             "Cook rolled oats with almond milk. Top with sliced banana and a dollop of almond butter. Drizzle with honey before serving.",
         calories: 310,
+        prepTime: 15,
+        servings: 2,
         image:
-            "https://asimplepalate.com/wp-content/uploads/2019/02/banana-oatmeal-1-500x375.jpg",
+            "https://www.fivehearthome.com/wp-content/uploads/2023/09/Peanut-Butter-Banana-Oatmeal-Recipe-by-FiveHeartHome_1200pxFeatured-1.jpg",
     },
     {
         name: "Avocado and Tomato Toast",
@@ -98,6 +106,8 @@ const breakfastRecipes = [
         instructions:
             "Place sliced avocado and tomato on toasted bread. Season with salt and pepper. Garnish with chopped cilantro.",
         calories: 280,
+        prepTime: 50,
+        servings: 2,
         image:
             "https://www.veggiessavetheday.com/wp-content/uploads/2021/09/Tomato-Avocado-Toast-FI-1200x1200-1.jpg",
     },
@@ -116,8 +126,10 @@ const breakfastRecipes = [
         instructions:
             "In a bowl, whisk together flour, sugar, baking powder, and salt. In another bowl, whisk together milk, egg, and melted butter. Pour the wet ingredients into the dry ingredients and stir until just combined. Heat a griddle or non-stick skillet over medium heat. Pour 1/4 cup of batter for each pancake onto the griddle. Cook until bubbles form on the surface, then flip and cook until golden brown. Serve with mixed berries on top.",
         calories: 350,
+        prepTime: 20,
+        servings: 5,
         image:
-            "https://foodhub.scene7.com/is/image/woolworthsltdprod/mixed-berry-pancakes:Mobile-1300x1150",
+            "https://www.ocado.com/cmscontent/recipe_image_large/30629010.jpg?Z8nr",
     },
     {
         name: "Spinach and Feta Omelette",
@@ -131,7 +143,9 @@ const breakfastRecipes = [
         instructions:
             "In a pan, saut fresh spinach in olive oil until wilted. Pour beaten eggs over the spinach. Sprinkle feta cheese on top. Cook until the eggs are set. Season with salt and pepper. Fold the omelette and serve.",
         calories: 320,
-        image: "link-to-spinach-feta-omelette.jpg", // https://joyfilledeats.com/wp-content/uploads/2022/10/spinach-feta-omelet-1-2.jpg
+        prepTime: 15,
+        servings: 3,
+        image: "https://freshapron.com/wp-content/uploads/2023/08/Spinach-and-Feta-Omelet-12.jpg",
     },
     {
         name: "Apple Cinnamon Overnight Oats",
@@ -146,8 +160,10 @@ const breakfastRecipes = [
         instructions:
             "In a jar, combine rolled oats, Greek yogurt, almond milk, diced apple, and cinnamon. Stir well. Refrigerate overnight. In the morning, drizzle honey on top and enjoy.",
         calories: 290,
+        prepTime: 500,
+        servings: 3,
         image:
-            "https://meganvskitchen.com/wp-content/uploads/2022/07/feta-spinach-omelette.-scaled.jpg", // The picture is not an apple cinnamon. I wll leave a link here: "https://nowcookthis.com/wp-content/uploads/2021/10/apple-cinnamon-oatmeal-stovetop-1.jpg"
+            "https://www.eatingwell.com/thmb/2g4AlQ8fXrFmDK7DIr9RUWPb8j0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/5761597-aa213e58be424b1dba68d4d04c8f5178.jpg",
     },
     {
         name: "Banana Nut Muffins",
@@ -164,8 +180,10 @@ const breakfastRecipes = [
         instructions:
             "Preheat the oven to 350°F (175°C). In a bowl, combine flour, sugar, baking powder, baking soda, and salt. In another bowl, mix mashed bananas and melted butter. Add the wet ingredients to the dry ingredients and stir until just combined. Fold in chopped nuts. Spoon the batter into muffin cups. Bake for 20-25 minutes or until a toothpick inserted comes out clean.",
         calories: 240,
+        prepTime: 20,
+        servings: 6,
         image:
-            "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2018/12/paleo-banana-nut-muffins-15-1.jpg",
+            "https://thebusybaker.ca/wp-content/uploads/2019/01/best-ever-banana-nut-muffins-fb-ig-2.jpg",
     },
 ];
 

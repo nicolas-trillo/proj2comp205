@@ -3,26 +3,103 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./base.css" />
         <link rel="stylesheet" href="home.css" />
+        <link rel="stylesheet" href="./base.css" />
+        <script src="../js/r_lunch.js"></script>
+        <script src="../js/r_breakfast.js"></script>
+        <link
+            rel="shortcut icon"
+            href="./assets/favicon.ico"
+            type="image/x-icon"
+        />
         <title>Le Juan's Recipe Book</title>
     </head>
     <body>
         <nav>
-            <div class="logo">
-                <img src="./assets/tea.png" class="logo-tea" alt="" srcset="" />
-                <img
-                    src="./assets/text-2.png"
-                    class="logo-text"
-                    alt=""
-                    srcset=""
-                />
-            </div>
+            <h1>LE JUAN'S RECIPE BOOK</h1>
             <div class="nav-links">
-                <a href="#">Home</a>
-                <a href="./recipe/">Breakfast</a>
-                <a href="#">Lunch</a>
+                <p>Explore the directory:</p>
+                <a href="./breakfast/">Breakfasts-></a>
+                <a href="./lunch/">Lunches-></a>
+                <a href="./contact/">Contact-></a>
             </div>
         </nav>
+
+        <section id="presentation">
+            <h1><br />Welcome to our recipe book.</h1>
+            <p></p>
+            <p>
+                Welcome to the grandma-friendly view of our directory. This is
+                the ultimate culinary haven where flavors come alive! Immerse
+                yourself in the artistry of cooking with Juan, our passionate
+                chef and the creative genius behind every delightful recipe.
+                Whether you're a seasoned chef with burn marks in your face, or
+                a kitchen novice, Le Juan's Recipe Book is your go-to
+                destination for a gastronomic journey filled with tantalizing
+                tastes and inspiring techniques.
+                <a href="./joke/" target="_blank" class="text-link"
+                    >We also sell cocaina.-></a
+                >
+            </p>
+        </section>
+        <h1 id="Breakfasts">Breakfasts</h1>
+        <section id="breakfast"></section>
+
+        <h1 id="Lunchs">Lunches</h1>
+        <section id="Lunch">
+            <script>
+                function random_item(arr) {
+                    var index = Math.floor(Math.random() * arr.length);
+                    var item = arr[index];
+                    return { item: item, position: index };
+                }
+                let br1 = random_item(breakfastRecipes);
+                let br2 = random_item(breakfastRecipes);
+                let br3 = random_item(breakfastRecipes);
+                document.getElementById("breakfast").innerHTML += `
+            <a href="./recipe/?t=b&r=${br1.position}" class="indBreakfast">
+                <img src="${br1.item.image}" alt="${br1.item.name}">
+                <h2>${br1.item.name}</h2>
+            </a>
+            <a href="./recipe/?t=b&r=${br2.position}" class="indBreakfast">
+                <img src="${br2.item.image}" alt="${br2.item.name}">
+                <h2>${br2.item.name}</h2>
+            </a>
+            <a href="./recipe/?t=b&r=${br3.position}" class="indBreakfast">
+                <img src="${br3.item.image}" alt="${br3.item.name}">
+                <h2>${br3.item.name}</h2>
+            </a>
+            <a href="/breakfast/" class="refreshmsg text-link">Refresh the page to view more recipes, or click here to enter the breakfast directory!</a>
+            `;
+                let lu1 = random_item(lunchRecipes);
+                let lu2 = random_item(lunchRecipes);
+                let lu3 = random_item(lunchRecipes);
+                document.getElementById("Lunch").innerHTML = `
+            <a href="./recipe/?t=l&r=${lu1.position}"<div class="indBreakfast1">
+                <img src="${lu1.item.image}" alt="${lu1.item.name}">
+                <div>
+                    <h2>${lu1.item.name}</h2>
+                </div>
+            </a>
+            <a href="./recipe/?t=l&r=${lu2.position}"<div class="indBreakfast1">
+                <img src="${lu2.item.image}" alt="${lu2.item.name}">
+                <div>
+                    <h2>${lu2.item.name}</h2>
+                </div>
+            </a>
+            <a href="./recipe/?t=l&r=${lu3.position}"<div class="indBreakfast1">
+                <img src="${lu3.item.image}" alt="${lu3.item.name}">
+                <div>
+                    <h2>${lu3.item.name}</h2>
+                </div>
+            </a>
+            <a href="/lunch/" class="refreshmsg text-link">Refresh the page to view more recipes, or click here to enter the lunches directory!</a>
+            `;
+            </script>
+        </section>
+        <a href="./assets/other/sample.html" class="logo">
+            <img src="./assets/tea.png" class="logo-tea" alt="" srcset="" />
+            <img src="./assets/text-2.png" class="logo-text" alt="" srcset="" />
+        </a>
     </body>
 </html>

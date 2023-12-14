@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,400;0,500;0,700;1,200;1,400;1,500;1,700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;700&display=swap");
+
+/* First CSS base file, later replaced by evilcss.css */
+/* Still used to a certain degree in the homepage. */
+
 /* variable declaration for ease of use and modification */
 :root {
     --std-size-a: 100px;
@@ -15,7 +19,7 @@
     box-sizing: border-box;
     max-width: 100%;
     /* Font family */
-    font-family: "Roboto", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 svg {
     width: 100%;
@@ -24,52 +28,16 @@ svg {
 /* coloring */
 body {
     background-color: var(--bg-colot);
-}
-/* logo */
-nav {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 150px;
-    height: 150px;
-    margin: 20px;
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    -o-border-radius: 100px;
-    background-color: var(--primary-color);
-    transition: height 0.7s ease-in-out;
-    -webkit-transition: height 0.7s ease-in-out;
-    -moz-transition: height 0.7s ease-in-out;
-    -ms-transition: height 0.7s ease-in-out;
-    -o-transition: height 0.7s ease-in-out;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
-}
-nav:hover {
-    height: 280px;
-}
-.nav-links {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    justify-content: flex-end;
-    gap: 10px;
-    flex-direction: column;
     padding: 20px;
 }
-nav a {
-    font-family: "IBM Plex Mono", monospace !important;
-    font-weight: 600;
-    font-size: large;
-    text-decoration: none;
-}
-nav a:hover {
-    text-decoration: underline;
-}
+
+/* logo */
 .logo {
+    margin: auto;
+    margin-top: 20px;
     display: flex;
-    position: absolute;
+    position: sticky;
+    top: 15px;
     justify-content: center;
     align-items: center;
     width: 150px;
@@ -81,6 +49,7 @@ nav a:hover {
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     border: 3px solid rgba(0, 0, 0, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
 }
 .logo img {
     width: auto;
@@ -98,6 +67,23 @@ nav a:hover {
     width: 100% !important;
     animation: speen 15s infinite linear;
     -webkit-animation: speen 15s infinite linear;
+}
+@media (max-width: 500px) {
+    .logo {
+        margin: auto;
+        position: sticky;
+        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -o-transform: scale(0.9);
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-items: flex-end;
+        text-align: end;
+    }
 }
 @keyframes speen {
     from {
@@ -121,16 +107,12 @@ nav a:hover {
     color: var(--type-color);
     line-height: 1.5;
 }
-h1,
-h2,
-h3,
-h4 {
-    font-family: "Crimson Pro", serif;
-}
 h1 {
+    font-family: "IBM Plex Mono", monospace;
     font-size: xx-large;
 }
 h2 {
+    font-family: "IBM Plex Mono", monospace;
     font-size: x-large;
 }
 /* 
@@ -138,3 +120,31 @@ font-family: 'Crimson Pro', serif;
 font-family: 'IBM Plex Mono', monospace;
 font-family: 'Inter', sans-serif; 
 */
+nav {
+    width: 100%;
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+nav * {
+    color: #f4efe9;
+    line-height: 1;
+}
+nav h1 {
+    font-family: "IBM Plex Mono", monospace;
+    padding: 0;
+    margin: 0;
+}
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.nav-links p {
+    color: #ed652a;
+}
+nav a:hover {
+    text-decoration: underline;
+}
